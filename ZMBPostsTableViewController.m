@@ -27,6 +27,69 @@
 {
     [super viewDidLoad];
 
+    ZMBPost *post = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post2 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post3 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post4 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post5 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post6 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post7 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post8 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post9 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    ZMBPost *post10 = [[ZMBPost alloc] init];
+    post.userName = @"BigThings22";
+    post.title = @"Let me tell you about my big things";
+    post.content = @"I bought a Tesla today";
+    post.timeStamp = [NSDate date];
+    
+    _posts = [NSMutableArray arrayWithObjects: post, post2, post3, post4, post5, post6, post7, post8, post9, post10, nil];
+
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -44,16 +107,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return _posts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +122,8 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = [_posts[indexPath.row] userName];
+    cell.detailTextLabel.text = [_posts[indexPath.row] content];
     
     return cell;
 }

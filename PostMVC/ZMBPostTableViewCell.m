@@ -8,6 +8,7 @@
 
 #import "ZMBPostTableViewCell.h"
 #import "ZMBPost.h"
+#import "ZMBPostsTableViewController.h"
 
 @implementation ZMBPostTableViewCell
 

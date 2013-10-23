@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZMBPost.h"
 
 @interface ZMBPostsTableViewController : UITableViewController
+
+@property (nonatomic) NSMutableArray *posts;
 
 @end
