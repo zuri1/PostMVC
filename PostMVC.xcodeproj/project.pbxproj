@@ -21,6 +21,7 @@
 		8AD2265E181740E400B1EA5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD22640181740E400B1EA5D /* UIKit.framework */; };
 		8AD22666181740E400B1EA5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AD22664181740E400B1EA5D /* InfoPlist.strings */; };
 		8AD22668181740E400B1EA5D /* PostMVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD22667181740E400B1EA5D /* PostMVCTests.m */; };
+		8AD226761817485300B1EA5D /* ZMBPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD226751817485300B1EA5D /* ZMBPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		8AD22663181740E400B1EA5D /* PostMVCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PostMVCTests-Info.plist"; sourceTree = "<group>"; };
 		8AD22665181740E400B1EA5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AD22667181740E400B1EA5D /* PostMVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostMVCTests.m; sourceTree = "<group>"; };
+		8AD226741817485300B1EA5D /* ZMBPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMBPost.h; sourceTree = "<group>"; };
+		8AD226751817485300B1EA5D /* ZMBPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMBPost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				8AD22645181740E400B1EA5D /* InfoPlist.strings */,
 				8AD22648181740E400B1EA5D /* main.m */,
 				8AD2264A181740E400B1EA5D /* PostMVC-Prefix.pch */,
+				8AD226741817485300B1EA5D /* ZMBPost.h */,
+				8AD226751817485300B1EA5D /* ZMBPost.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				8AD2264D181740E400B1EA5D /* ZMBAppDelegate.m in Sources */,
 				8AD22649181740E400B1EA5D /* main.m in Sources */,
 				8AD22653181740E400B1EA5D /* ZMBViewController.m in Sources */,
+				8AD226761817485300B1EA5D /* ZMBPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
