@@ -14,7 +14,6 @@
 		8AD22649181740E400B1EA5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD22648181740E400B1EA5D /* main.m */; };
 		8AD2264D181740E400B1EA5D /* ZMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2264C181740E400B1EA5D /* ZMBAppDelegate.m */; };
 		8AD22650181740E400B1EA5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD2264E181740E400B1EA5D /* Main.storyboard */; };
-		8AD22653181740E400B1EA5D /* ZMBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD22652181740E400B1EA5D /* ZMBViewController.m */; };
 		8AD22655181740E400B1EA5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD22654181740E400B1EA5D /* Images.xcassets */; };
 		8AD2265C181740E400B1EA5D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD2265B181740E400B1EA5D /* XCTest.framework */; };
 		8AD2265D181740E400B1EA5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD2263C181740E400B1EA5D /* Foundation.framework */; };
@@ -22,6 +21,8 @@
 		8AD22666181740E400B1EA5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AD22664181740E400B1EA5D /* InfoPlist.strings */; };
 		8AD22668181740E400B1EA5D /* PostMVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD22667181740E400B1EA5D /* PostMVCTests.m */; };
 		8AD226761817485300B1EA5D /* ZMBPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD226751817485300B1EA5D /* ZMBPost.m */; };
+		8AD2267918174C2300B1EA5D /* ZMBPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2267818174C2300B1EA5D /* ZMBPostTableViewCell.m */; };
+		8AD2267C181856BE00B1EA5D /* ZMBPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2267B181856BE00B1EA5D /* ZMBPostsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,6 @@
 		8AD2264B181740E400B1EA5D /* ZMBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMBAppDelegate.h; sourceTree = "<group>"; };
 		8AD2264C181740E400B1EA5D /* ZMBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMBAppDelegate.m; sourceTree = "<group>"; };
 		8AD2264F181740E400B1EA5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8AD22651181740E400B1EA5D /* ZMBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMBViewController.h; sourceTree = "<group>"; };
-		8AD22652181740E400B1EA5D /* ZMBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMBViewController.m; sourceTree = "<group>"; };
 		8AD22654181740E400B1EA5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8AD2265A181740E400B1EA5D /* PostMVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostMVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD2265B181740E400B1EA5D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,6 +55,10 @@
 		8AD22667181740E400B1EA5D /* PostMVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostMVCTests.m; sourceTree = "<group>"; };
 		8AD226741817485300B1EA5D /* ZMBPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMBPost.h; sourceTree = "<group>"; };
 		8AD226751817485300B1EA5D /* ZMBPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMBPost.m; sourceTree = "<group>"; };
+		8AD2267718174C2300B1EA5D /* ZMBPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMBPostTableViewCell.h; sourceTree = "<group>"; };
+		8AD2267818174C2300B1EA5D /* ZMBPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMBPostTableViewCell.m; sourceTree = "<group>"; };
+		8AD2267A181856BE00B1EA5D /* ZMBPostsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZMBPostsTableViewController.h; path = ../ZMBPostsTableViewController.h; sourceTree = "<group>"; };
+		8AD2267B181856BE00B1EA5D /* ZMBPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZMBPostsTableViewController.m; path = ../ZMBPostsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +121,10 @@
 				8AD2264B181740E400B1EA5D /* ZMBAppDelegate.h */,
 				8AD2264C181740E400B1EA5D /* ZMBAppDelegate.m */,
 				8AD2264E181740E400B1EA5D /* Main.storyboard */,
-				8AD22651181740E400B1EA5D /* ZMBViewController.h */,
-				8AD22652181740E400B1EA5D /* ZMBViewController.m */,
+				8AD2267A181856BE00B1EA5D /* ZMBPostsTableViewController.h */,
+				8AD2267B181856BE00B1EA5D /* ZMBPostsTableViewController.m */,
+				8AD2267718174C2300B1EA5D /* ZMBPostTableViewCell.h */,
+				8AD2267818174C2300B1EA5D /* ZMBPostTableViewCell.m */,
 				8AD22654181740E400B1EA5D /* Images.xcassets */,
 				8AD22643181740E400B1EA5D /* Supporting Files */,
 			);
@@ -255,9 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD2267918174C2300B1EA5D /* ZMBPostTableViewCell.m in Sources */,
+				8AD2267C181856BE00B1EA5D /* ZMBPostsTableViewController.m in Sources */,
 				8AD2264D181740E400B1EA5D /* ZMBAppDelegate.m in Sources */,
 				8AD22649181740E400B1EA5D /* main.m in Sources */,
-				8AD22653181740E400B1EA5D /* ZMBViewController.m in Sources */,
 				8AD226761817485300B1EA5D /* ZMBPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
