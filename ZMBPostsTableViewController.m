@@ -7,6 +7,8 @@
 //
 
 #import "ZMBPostsTableViewController.h"
+#import "ZMBPost.h"
+#import "ZMBPostTableViewCell.h"
 
 @interface ZMBPostsTableViewController ()
 
@@ -34,58 +36,58 @@
     post.timeStamp = [NSDate date];
     
     ZMBPost *post2 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post2.userName = @"AnthonySlopkins";
+    post2.title = @"War & Please";
+    post2.content = @"I really loved playing Pierre";
+    post2.timeStamp = [NSDate date];
     
     ZMBPost *post3 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post3.userName = @"BillYates";
+    post3.title = @"Whereforetran";
+    post3.content = @"I noticed lonely bytes, roaming freely...";
+    post3.timeStamp = [NSDate date];
     
     ZMBPost *post4 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post4.userName = @"RickyRoss";
+    post4.title = @"Weight loss";
+    post4.content = @"I'm tryin out this new paleo thing lol";
+    post4.timeStamp = [NSDate date];
     
     ZMBPost *post5 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post5.userName = @"GucciMane";
+    post5.title = @"My Chain";
+    post5.content = @"I bought a chain today";
+    post5.timeStamp = [NSDate date];
     
     ZMBPost *post6 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post6.userName = @"BarackOBrama";
+    post6.title = @"Barack O's Tacos";
+    post6.content = @"Taste the change.";
+    post6.timeStamp = [NSDate date];
     
     ZMBPost *post7 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post7.userName = @"Sterv Jerbs";
+    post7.title = @"What heaven is like";
+    post7.content = @"Insanely great (lulz!)";
+    post7.timeStamp = [NSDate date];
     
     ZMBPost *post8 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post8.userName = @"Buddha";
+    post8.title = @"Wisdom";
+    post8.content = @"There is no tension for those who have completed their journey";
+    post8.timeStamp = [NSDate date];
     
     ZMBPost *post9 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post9.userName = @"MikeFoley";
+    post9.title = @"DreamCatcher";
+    post9.content = @"I almost made it";
+    post9.timeStamp = [NSDate date];
     
     ZMBPost *post10 = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
+    post10.userName = @"Heather";
+    post10.title = @"Vitamix";
+    post10.content = @"I lost my vitamix, has anyone seen it?";
+    post10.timeStamp = [NSDate date];
     
     _posts = [NSMutableArray arrayWithObjects: post, post2, post3, post4, post5, post6, post7, post8, post9, post10, nil];
 

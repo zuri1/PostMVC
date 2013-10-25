@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZMBPostsTableViewController.h"
 
 @interface ZMBAppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -7,6 +7,7 @@
 //
 
 #import "ZMBAppDelegate.h"
+#import "ZMBPostsTableViewController.h"
 
 @implementation ZMBAppDelegate
 
