@@ -14,4 +14,9 @@
 
 @property (nonatomic) ZMBPost *post;
 
+@property (nonatomic) IBOutlet UILabel *userName;
+@property (nonatomic) IBOutlet UILabel *title;
+@property (nonatomic) IBOutlet UILabel *content;
+@property (nonatomic) IBOutlet UILabel *timeStamp;
+
 @end
