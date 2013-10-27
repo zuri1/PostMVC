@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A920C5A181CDE340010AB83 /* ZMBEditPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A920C59181CDE340010AB83 /* ZMBEditPostsTableViewController.m */; };
 		8AD2263D181740E400B1EA5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD2263C181740E400B1EA5D /* Foundation.framework */; };
 		8AD2263F181740E400B1EA5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD2263E181740E400B1EA5D /* CoreGraphics.framework */; };
 		8AD22641181740E400B1EA5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD22640181740E400B1EA5D /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A920C58181CDE340010AB83 /* ZMBEditPostsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZMBEditPostsTableViewController.h; path = ../ZMBEditPostsTableViewController.h; sourceTree = "<group>"; };
+		8A920C59181CDE340010AB83 /* ZMBEditPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZMBEditPostsTableViewController.m; path = ../ZMBEditPostsTableViewController.m; sourceTree = "<group>"; };
 		8AD22639181740E400B1EA5D /* PostMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD2263C181740E400B1EA5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8AD2263E181740E400B1EA5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 				8AD2264E181740E400B1EA5D /* Main.storyboard */,
 				8AD2267A181856BE00B1EA5D /* ZMBPostsTableViewController.h */,
 				8AD2267B181856BE00B1EA5D /* ZMBPostsTableViewController.m */,
+				8A920C58181CDE340010AB83 /* ZMBEditPostsTableViewController.h */,
+				8A920C59181CDE340010AB83 /* ZMBEditPostsTableViewController.m */,
 				8AD2267718174C2300B1EA5D /* ZMBPostTableViewCell.h */,
 				8AD2267818174C2300B1EA5D /* ZMBPostTableViewCell.m */,
 				8AD22654181740E400B1EA5D /* Images.xcassets */,
@@ -265,6 +270,7 @@
 				8AD2264D181740E400B1EA5D /* ZMBAppDelegate.m in Sources */,
 				8AD22649181740E400B1EA5D /* main.m in Sources */,
 				8AD226761817485300B1EA5D /* ZMBPost.m in Sources */,
+				8A920C5A181CDE340010AB83 /* ZMBEditPostsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +479,7 @@
 				8AD2266D181740E400B1EA5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AD2266E181740E400B1EA5D /* Build configuration list for PBXNativeTarget "PostMVCTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +488,7 @@
 				8AD22670181740E400B1EA5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

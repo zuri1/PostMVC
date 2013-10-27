@@ -12,5 +12,6 @@
 @interface ZMBPostsTableViewController : UITableViewController
 
 @property (nonatomic) NSMutableArray *posts;
+@property (nonatomic, weak) IBOutlet UIButton *editButton;
 
 @end
