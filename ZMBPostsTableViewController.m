@@ -9,8 +9,9 @@
 #import "ZMBPostsTableViewController.h"
 #import "ZMBPost.h"
 #import "ZMBPostTableViewCell.h"
+#import "ZMBEditPostsViewController.h"
 
-@interface ZMBPostsTableViewController ()
+@interface ZMBPostsTableViewController () <ZMBEditPostsViewControllerDelegate>
 
 @end
 
@@ -139,6 +140,19 @@
     cell.timeStamp.text = formattedDateString;
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"editPostsSegue"])
+    {
+        ZMBEditPostsViewController *editVC = (ZMBEditPostsViewController *)segue.destinationViewController;
+        editVC.delegate = self;
+        editVC.post = _posts[[self.tableView indexPathForSelectedRow].row];
+    }
+}
+
+- (void)postWasEdited:(ZMBPost *)post{
+    [self.tableView reloadData];
 }
 
 /*
