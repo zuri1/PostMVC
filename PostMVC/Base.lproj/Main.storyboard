@@ -103,7 +103,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GH-I1-sSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-218" y="-160"/>
+            <point key="canvasLocation" x="-148" y="-467"/>
+        </scene>
+        <!--Create Posts View Controller-->
+        <scene sceneID="Xac-4b-Bl6">
+            <objects>
+                <viewController id="GO5-ky-yMD" customClass="ZMBCreatePostsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6yq-Op-QB2"/>
+                        <viewControllerLayoutGuide type="bottom" id="5iF-q2-aMa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="spK-nh-hxc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IP2-2s-JB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-148" y="181"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

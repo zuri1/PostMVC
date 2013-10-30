@@ -24,6 +24,7 @@
 		8AD2267918174C2300B1EA5D /* ZMBPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2267818174C2300B1EA5D /* ZMBPostTableViewCell.m */; };
 		8AD2267C181856BE00B1EA5D /* ZMBPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2267B181856BE00B1EA5D /* ZMBPostsTableViewController.m */; };
 		8AECBDCC181DC2A10045BF26 /* ZMBEditPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AECBDCB181DC2A10045BF26 /* ZMBEditPostsViewController.m */; };
+		8AECBE1C1821BA6B0045BF26 /* ZMBCreatePostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AECBE1B1821BA6B0045BF26 /* ZMBCreatePostsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		8AD2267B181856BE00B1EA5D /* ZMBPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZMBPostsTableViewController.m; path = ../ZMBPostsTableViewController.m; sourceTree = "<group>"; };
 		8AECBDCA181DC2A10045BF26 /* ZMBEditPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMBEditPostsViewController.h; sourceTree = "<group>"; };
 		8AECBDCB181DC2A10045BF26 /* ZMBEditPostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMBEditPostsViewController.m; sourceTree = "<group>"; };
+		8AECBE1A1821BA6B0045BF26 /* ZMBCreatePostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMBCreatePostsViewController.h; sourceTree = "<group>"; };
+		8AECBE1B1821BA6B0045BF26 /* ZMBCreatePostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMBCreatePostsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				8AD2267818174C2300B1EA5D /* ZMBPostTableViewCell.m */,
 				8AECBDCA181DC2A10045BF26 /* ZMBEditPostsViewController.h */,
 				8AECBDCB181DC2A10045BF26 /* ZMBEditPostsViewController.m */,
+				8AECBE1A1821BA6B0045BF26 /* ZMBCreatePostsViewController.h */,
+				8AECBE1B1821BA6B0045BF26 /* ZMBCreatePostsViewController.m */,
 				8AD22654181740E400B1EA5D /* Images.xcassets */,
 				8AD22643181740E400B1EA5D /* Supporting Files */,
 			);
@@ -269,6 +274,7 @@
 				8AD2267C181856BE00B1EA5D /* ZMBPostsTableViewController.m in Sources */,
 				8AECBDCC181DC2A10045BF26 /* ZMBEditPostsViewController.m in Sources */,
 				8AD2264D181740E400B1EA5D /* ZMBAppDelegate.m in Sources */,
+				8AECBE1C1821BA6B0045BF26 /* ZMBCreatePostsViewController.m in Sources */,
 				8AD22649181740E400B1EA5D /* main.m in Sources */,
 				8AD226761817485300B1EA5D /* ZMBPost.m in Sources */,
 			);
