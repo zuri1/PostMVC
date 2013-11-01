@@ -7,8 +7,16 @@
 //
 
 #import "ZMBCreatePostsViewController.h"
+#import "ZMBPost.h"
+#import "ZMBPostsTableViewController.h"
 
 @interface ZMBCreatePostsViewController ()
+
+- (IBAction)goBackToTableViewController:(id)sender;
+@property (nonatomic, weak) IBOutlet UITextField *titleField;
+@property (nonatomic, weak) IBOutlet UITextField *contentField;
+@property (nonatomic, weak) IBOutlet UITextField *userNameField;
+@property (nonatomic, weak) IBOutlet UITextField *timeStampField;
 
 @end
 
@@ -27,6 +35,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    // If you had a property, you could do this...
+    // _post = [ZMBPost new];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +46,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)goBackToTableViewController:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+
+        ZMBPost *post = [ZMBPost new];
+        [post setTitle:_titleField.text];
+        [post setUserName:_userNameField.text];
+        [post setContent:_contentField.text];
+        [self.delegate postWasCreated:post];
+    }];
+}
+
 
 @end

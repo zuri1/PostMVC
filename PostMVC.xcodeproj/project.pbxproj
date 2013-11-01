@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AB33503182340C900E524C3 /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB33502182340C900E524C3 /* UIColor+RandomColor.m */; };
 		8AD2263D181740E400B1EA5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD2263C181740E400B1EA5D /* Foundation.framework */; };
 		8AD2263F181740E400B1EA5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD2263E181740E400B1EA5D /* CoreGraphics.framework */; };
 		8AD22641181740E400B1EA5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD22640181740E400B1EA5D /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8AB33501182340C900E524C3 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
+		8AB33502182340C900E524C3 /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
 		8AD22639181740E400B1EA5D /* PostMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD2263C181740E400B1EA5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8AD2263E181740E400B1EA5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +153,8 @@
 				8AD2264A181740E400B1EA5D /* PostMVC-Prefix.pch */,
 				8AD226741817485300B1EA5D /* ZMBPost.h */,
 				8AD226751817485300B1EA5D /* ZMBPost.m */,
+				8AB33501182340C900E524C3 /* UIColor+RandomColor.h */,
+				8AB33502182340C900E524C3 /* UIColor+RandomColor.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				8AD2267C181856BE00B1EA5D /* ZMBPostsTableViewController.m in Sources */,
 				8AECBDCC181DC2A10045BF26 /* ZMBEditPostsViewController.m in Sources */,
 				8AD2264D181740E400B1EA5D /* ZMBAppDelegate.m in Sources */,
+				8AB33503182340C900E524C3 /* UIColor+RandomColor.m in Sources */,
 				8AECBE1C1821BA6B0045BF26 /* ZMBCreatePostsViewController.m in Sources */,
 				8AD22649181740E400B1EA5D /* main.m in Sources */,
 				8AD226761817485300B1EA5D /* ZMBPost.m in Sources */,

@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ZMBPost.h"
 
+@protocol ZMBCreatePostsViewControllerDelegate <NSObject>
+
+- (void)postWasCreated:(ZMBPost *) post;
+
+@end
+
 @interface ZMBCreatePostsViewController : UIViewController
 
-@property (nonatomic, weak) ZMBPost *post;
+@property (nonatomic, weak) id<ZMBCreatePostsViewControllerDelegate> delegate;
 
 @end

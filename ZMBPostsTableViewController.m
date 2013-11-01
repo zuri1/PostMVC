@@ -10,8 +10,13 @@
 #import "ZMBPost.h"
 #import "ZMBPostTableViewCell.h"
 #import "ZMBEditPostsViewController.h"
+#import "ZMBCreatePostsViewController.h"
 
 @interface ZMBPostsTableViewController () <ZMBEditPostsViewControllerDelegate>
+
+@end
+
+@interface ZMBPostsTableViewController () <ZMBCreatePostsViewControllerDelegate>
 
 @end
 
@@ -148,10 +153,24 @@
         ZMBEditPostsViewController *editVC = (ZMBEditPostsViewController *)segue.destinationViewController;
         editVC.delegate = self;
         editVC.post = _posts[[self.tableView indexPathForSelectedRow].row];
+        
+//        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+//        NSInteger selectedRow = [selectedIndexPath row];
+//        [_posts objectAtIndex: selectedRow];
     }
+    if ([segue.identifier isEqualToString:@"createPostsSegue"])
+    {
+        ZMBCreatePostsViewController *createVC = (ZMBCreatePostsViewController *)segue.destinationViewController;
+        createVC.delegate = self;
+        }
 }
 
 - (void)postWasEdited:(ZMBPost *)post{
+    [self.tableView reloadData];
+}
+
+- (void)postWasCreated:(ZMBPost *)post{
+    [_posts addObject:post];
     [self.tableView reloadData];
 }
 
