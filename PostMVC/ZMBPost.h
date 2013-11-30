@@ -14,10 +14,11 @@
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *content;
 @property (nonatomic) NSDate *timeStamp;
+@property (nonatomic) UIColor *color;
 
 - (id)initWithUserName:(NSString *)aUserName
                  title:(NSString *)aTitle
                content:(NSString *)aContent
-             timeStamp:(NSString *)aTimeStamp;
-
+             timeStamp:(NSString *)aTimeStamp
+                 color:(UIColor *)aColor;
 @end

@@ -55,6 +55,7 @@
         [post setTitle:_titleField.text];
         [post setUserName:_userNameField.text];
         [post setContent:_contentField.text];
+        [post setColor:[UIColor setRandomColor]];
         [self.delegate postWasCreated:post];
     }];
 }

@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "ZMBPost.h"
 #import "ZMBPostTableViewCell.h"
+#import "UIColor+RandomColor.h"
 
 @interface ZMBPostsTableViewController : UITableViewController
 
 @property (nonatomic) NSMutableArray *posts;
+@property (nonatomic, retain) UIView *tableHeaderView;
 
 @end

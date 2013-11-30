@@ -19,13 +19,15 @@
 - (id)initWithUserName:(NSString *)aUserName
                  title:(NSString *)aTitle
                content:(NSString *)aContent
-             timeStamp:(NSDate *)aTimeStamp {
+             timeStamp:(NSDate *)aTimeStamp
+                 color:(UIColor *)aColor{
     self = [super init];
     if(self) {
         self.userName = aUserName;
         self.title = aTitle;
         self.content = aContent;
         self.timeStamp = aTimeStamp;
+        self.color = aColor;
     }
     return self;
 }

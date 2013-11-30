@@ -12,11 +12,8 @@
 #import "ZMBEditPostsViewController.h"
 #import "ZMBCreatePostsViewController.h"
 
-@interface ZMBPostsTableViewController () <ZMBEditPostsViewControllerDelegate>
 
-@end
-
-@interface ZMBPostsTableViewController () <ZMBCreatePostsViewControllerDelegate>
+@interface ZMBPostsTableViewController () <ZMBEditPostsViewControllerDelegate, ZMBCreatePostsViewControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -40,63 +37,74 @@
     post.title = @"Let me tell you about my big things";
     post.content = @"I bought a Tesla today";
     post.timeStamp = [NSDate date];
+    post.color = [UIColor setRandomColor];
     
     ZMBPost *post2 = [[ZMBPost alloc] init];
     post2.userName = @"AnthonySlopkins";
     post2.title = @"War & Please";
     post2.content = @"I really loved playing Pierre";
     post2.timeStamp = [NSDate date];
+    post2.color = [UIColor setRandomColor];
     
     ZMBPost *post3 = [[ZMBPost alloc] init];
     post3.userName = @"BillYates";
     post3.title = @"Whereforetran";
     post3.content = @"I noticed lonely bytes, roaming freely...";
     post3.timeStamp = [NSDate date];
+    post3.color = [UIColor setRandomColor];
     
     ZMBPost *post4 = [[ZMBPost alloc] init];
     post4.userName = @"RickyRoss";
     post4.title = @"Weight loss";
     post4.content = @"I'm tryin out this new paleo thing lol";
     post4.timeStamp = [NSDate date];
+    post4.color = [UIColor setRandomColor];
     
     ZMBPost *post5 = [[ZMBPost alloc] init];
     post5.userName = @"GucciMane";
     post5.title = @"My Chain";
     post5.content = @"I bought a chain today";
     post5.timeStamp = [NSDate date];
+    post5.color = [UIColor setRandomColor];
     
     ZMBPost *post6 = [[ZMBPost alloc] init];
     post6.userName = @"BarackOBrama";
     post6.title = @"Barack O's Tacos";
     post6.content = @"Taste the change.";
     post6.timeStamp = [NSDate date];
+    post6.color = [UIColor setRandomColor];
     
     ZMBPost *post7 = [[ZMBPost alloc] init];
     post7.userName = @"Sterv Jerbs";
     post7.title = @"What heaven is like";
     post7.content = @"Insanely great (lulz!)";
     post7.timeStamp = [NSDate date];
+    post7.color = [UIColor setRandomColor];
     
     ZMBPost *post8 = [[ZMBPost alloc] init];
     post8.userName = @"Buddha";
     post8.title = @"Wisdom";
     post8.content = @"There is no tension for those who have completed their journey";
     post8.timeStamp = [NSDate date];
+    post8.color = [UIColor setRandomColor];
     
     ZMBPost *post9 = [[ZMBPost alloc] init];
     post9.userName = @"MikeFoley";
     post9.title = @"DreamCatcher";
     post9.content = @"I almost made it";
     post9.timeStamp = [NSDate date];
+    post9.color = [UIColor setRandomColor];
     
     ZMBPost *post10 = [[ZMBPost alloc] init];
     post10.userName = @"Heather";
     post10.title = @"Vitamix";
     post10.content = @"I lost my vitamix, has anyone seen it?";
     post10.timeStamp = [NSDate date];
+    post10.color = [UIColor setRandomColor];
     
     _posts = [NSMutableArray arrayWithObjects: post, post2, post3, post4, post5, post6, post7, post8, post9, post10, nil];
 
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -125,6 +133,10 @@
     return _posts.count;
 }
 
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    cell.contentView.backgroundColor = [UIColor setRandomColor];
+//}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -133,6 +145,7 @@
     cell.userName.text = [_posts[indexPath.row] userName];
     cell.content.text = [_posts[indexPath.row] content];
     cell.title.text = [_posts[indexPath.row] title];
+    cell.contentView.backgroundColor = [_posts[indexPath.row] color];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
@@ -144,8 +157,25 @@
     
     cell.timeStamp.text = formattedDateString;
     
+//    cell.backgroundColor = [UIColor setRandomColor];
+    
     return cell;
 }
+
+#pragma mark - swipe to delete
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return YES;
+//}
+//
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        [_posts removeObjectAtIndex:indexPath.row];
+//        [tableView beginUpdates];
+//        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        [tableView endUpdates];
+//        [self.tableView reloadData];
+//    }
+//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"editPostsSegue"])
@@ -173,6 +203,8 @@
     [_posts addObject:post];
     [self.tableView reloadData];
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.
