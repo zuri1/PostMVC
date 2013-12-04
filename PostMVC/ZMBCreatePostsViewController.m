@@ -41,6 +41,13 @@
     
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    
+    [self.view endEditing:YES];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -50,7 +57,6 @@
 - (IBAction)goBackToTableViewController:(id)sender
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
-
         ZMBPost *post = [ZMBPost new];
         [post setTitle:_titleField.text];
         [post setUserName:_userNameField.text];

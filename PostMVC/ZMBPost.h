@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ZMBPost : NSObject
+@interface ZMBPost : NSObject <NSCoding>
 
 @property (nonatomic) NSString *userName;
 @property (nonatomic) NSString *title;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A602AE71828577E0054DFD7 /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A602AE61828577E0054DFD7 /* UIColor+RandomColor.m */; };
+		8ABD4706184D7C9B00BF57F4 /* Posts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8ABD4705184D7C9B00BF57F4 /* Posts.plist */; };
 		8AD2263D181740E400B1EA5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD2263C181740E400B1EA5D /* Foundation.framework */; };
 		8AD2263F181740E400B1EA5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD2263E181740E400B1EA5D /* CoreGraphics.framework */; };
 		8AD22641181740E400B1EA5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD22640181740E400B1EA5D /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		8A602AE51828577E0054DFD7 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
 		8A602AE61828577E0054DFD7 /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
+		8ABD4705184D7C9B00BF57F4 /* Posts.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Posts.plist; sourceTree = "<group>"; };
 		8AD22639181740E400B1EA5D /* PostMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD2263C181740E400B1EA5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8AD2263E181740E400B1EA5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,6 +149,7 @@
 		8AD22643181740E400B1EA5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8ABD4705184D7C9B00BF57F4 /* Posts.plist */,
 				8AD22644181740E400B1EA5D /* PostMVC-Info.plist */,
 				8AD22645181740E400B1EA5D /* InfoPlist.strings */,
 				8AD22648181740E400B1EA5D /* main.m */,
@@ -256,6 +259,7 @@
 			files = (
 				8AD22655181740E400B1EA5D /* Images.xcassets in Resources */,
 				8AD22647181740E400B1EA5D /* InfoPlist.strings in Resources */,
+				8ABD4706184D7C9B00BF57F4 /* Posts.plist in Resources */,
 				8AD22650181740E400B1EA5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

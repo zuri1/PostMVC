@@ -54,6 +54,7 @@
 - (void)savePost
 {
     [_post setTitle:_titleField.text];
+    NSLog(@"post is: %@", _post.title);
 }
 
 /*

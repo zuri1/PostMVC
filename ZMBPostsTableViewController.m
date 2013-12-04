@@ -31,78 +31,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *docsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    docsPath = [docsPath stringByAppendingPathComponent:@"Posts.plist"];
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    NSString *plistPath;
+    
+    if ([fileManager fileExistsAtPath:docsPath]) {
+        plistPath = docsPath;
+    } else {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"Posts" ofType:@"plist"];
+    }
+    
+    NSData *postsData = [NSData dataWithContentsOfFile:plistPath];
+    //NSLog(@"Posts Data: %@", postsData);
 
-    ZMBPost *post = [[ZMBPost alloc] init];
-    post.userName = @"BigThings22";
-    post.title = @"Let me tell you about my big things";
-    post.content = @"I bought a Tesla today";
-    post.timeStamp = [NSDate date];
-    post.color = [UIColor setRandomColor];
-    
-    ZMBPost *post2 = [[ZMBPost alloc] init];
-    post2.userName = @"AnthonySlopkins";
-    post2.title = @"War & Please";
-    post2.content = @"I really loved playing Pierre";
-    post2.timeStamp = [NSDate date];
-    post2.color = [UIColor setRandomColor];
-    
-    ZMBPost *post3 = [[ZMBPost alloc] init];
-    post3.userName = @"BillYates";
-    post3.title = @"Whereforetran";
-    post3.content = @"I noticed lonely bytes, roaming freely...";
-    post3.timeStamp = [NSDate date];
-    post3.color = [UIColor setRandomColor];
-    
-    ZMBPost *post4 = [[ZMBPost alloc] init];
-    post4.userName = @"RickyRoss";
-    post4.title = @"Weight loss";
-    post4.content = @"I'm tryin out this new paleo thing lol";
-    post4.timeStamp = [NSDate date];
-    post4.color = [UIColor setRandomColor];
-    
-    ZMBPost *post5 = [[ZMBPost alloc] init];
-    post5.userName = @"GucciMane";
-    post5.title = @"My Chain";
-    post5.content = @"I bought a chain today";
-    post5.timeStamp = [NSDate date];
-    post5.color = [UIColor setRandomColor];
-    
-    ZMBPost *post6 = [[ZMBPost alloc] init];
-    post6.userName = @"BarackOBrama";
-    post6.title = @"Barack O's Tacos";
-    post6.content = @"Taste the change.";
-    post6.timeStamp = [NSDate date];
-    post6.color = [UIColor setRandomColor];
-    
-    ZMBPost *post7 = [[ZMBPost alloc] init];
-    post7.userName = @"Sterv Jerbs";
-    post7.title = @"What heaven is like";
-    post7.content = @"Insanely great (lulz!)";
-    post7.timeStamp = [NSDate date];
-    post7.color = [UIColor setRandomColor];
-    
-    ZMBPost *post8 = [[ZMBPost alloc] init];
-    post8.userName = @"Buddha";
-    post8.title = @"Wisdom";
-    post8.content = @"There is no tension for those who have completed their journey";
-    post8.timeStamp = [NSDate date];
-    post8.color = [UIColor setRandomColor];
-    
-    ZMBPost *post9 = [[ZMBPost alloc] init];
-    post9.userName = @"MikeFoley";
-    post9.title = @"DreamCatcher";
-    post9.content = @"I almost made it";
-    post9.timeStamp = [NSDate date];
-    post9.color = [UIColor setRandomColor];
-    
-    ZMBPost *post10 = [[ZMBPost alloc] init];
-    post10.userName = @"Heather";
-    post10.title = @"Vitamix";
-    post10.content = @"I lost my vitamix, has anyone seen it?";
-    post10.timeStamp = [NSDate date];
-    post10.color = [UIColor setRandomColor];
-    
-    _posts = [NSMutableArray arrayWithObjects: post, post2, post3, post4, post5, post6, post7, post8, post9, post10, nil];
+    _posts = [NSKeyedUnarchiver unarchiveObjectWithData:postsData];
+    //NSLog(@"Posts: %@", _posts);
 
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -192,11 +137,18 @@
 }
 
 - (void)postWasEdited:(ZMBPost *)post{
+    NSString *docsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    docsPath = [docsPath stringByAppendingPathComponent:@"Posts.plist"];
+    [NSKeyedArchiver archiveRootObject:_posts toFile:docsPath];
     [self.tableView reloadData];
+    NSLog(@"post was edite happened");
 }
 
 - (void)postWasCreated:(ZMBPost *)post{
     [_posts addObject:post];
+    NSString *docsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    docsPath = [docsPath stringByAppendingPathComponent:@"Posts.plist"];
+    [NSKeyedArchiver archiveRootObject:_posts toFile:docsPath];
     [self.tableView reloadData];
 }
 
